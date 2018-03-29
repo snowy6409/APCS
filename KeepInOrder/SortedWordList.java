@@ -65,8 +65,32 @@ public class SortedWordList extends ArrayList<String>{
 		
 	}
 	public boolean add(String str) {
-		return false;
-		
+		if ( this.contains( str ) )
+        {
+            return false;
+        }
+
+        int low = 0;
+        int high = this.size() - 1;
+        int middle;
+        
+        while ( low <= high )
+        {
+
+            middle = ( low + high ) / 2;
+
+            int subtract = str.compareTo( this.get( middle ) );
+            if ( subtract > 0 )
+            {
+                low = middle + 1;
+            }
+            else if ( subtract < 0 )
+            {
+                high = middle - 1;
+            }
+        }
+        super.add( high + 1, str );
+        return true;		
 	}
 	public void add(int i, String str) {
 		

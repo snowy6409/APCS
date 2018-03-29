@@ -7,7 +7,7 @@ public class SortedListTest
     names1.add("Ellen");
     names1.add("Dan");
     System.out.println("names1 = " + names1);
-//Hi
+//Hi Hello
     names1.add(1, "Connie");
     names1.add(0, "Aaron");
 //  names1.add(1, "Aaron");
